@@ -1,12 +1,14 @@
 import React from 'react'
+import styled from "styled-components";
 
-function Header() {
+
+const Header = (props) => {
     return (
-        <div>
-        <h1>
+        <div classNmae="logo">
+        <h1 className="app-name">
             Teach Me
         </h1>
-        <div>
+        <div className="searchbar">
             <input type="search" placeholder="Search" results="0" />
         </div>
 
