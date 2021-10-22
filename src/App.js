@@ -11,10 +11,11 @@ function App() {
       <Router>
         <Switch>
           <Route  path="/">
-            <Header />
+            
           </Route>
         </Switch>
-        </Router>
+     </Router>
+        <Header />
    </div>
   );
 }

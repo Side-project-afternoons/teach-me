@@ -9,7 +9,7 @@ flex-direction: row;
 text-align: center;
 height: 100vh;
 margin-left:10px;
-align-items: space-between;
+align-items: space-evenly;
 `;
 
 
@@ -23,20 +23,26 @@ padding-left: 10px;
 margin-top: 33px;
 padding-left: 10px;
 height: 3.5vh;
-border: 2px solid black;
+border: none
 `;
 
+
+const Logo = styled.div`
+display: flex;
+
+`
 
 const Header = (props) => {
     return (
   <Container>        
-    <logo>
+    <Logo>
         <h1 className="app-name">
             Teach Me
         </h1>
-    </logo>
+    </Logo>
+
         <Searchbar>
-            <input type="search" placeholder="Search" results="0" />
+            <input type="text" placeholder="Search" results="0" />
         </Searchbar>
 
     </Container>
