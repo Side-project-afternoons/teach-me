@@ -41,7 +41,7 @@ const Coursecard = ({ courseName }) => {
       numberRating = 4.1;
       numberOfReviews = "379,593";
       background = {
-        "background": `linear-gradient(to top right, #3F03AA, #A855F7)`,
+        "backgroundImage": `url("../images/pythonLogo.svg"),linear-gradient(to top right, #3F03AA, #A855F7)`,
       };
       logo = pythonLogo;
       break;
