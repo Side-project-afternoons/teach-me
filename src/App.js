@@ -1,14 +1,23 @@
-import "./App.css";
-import Hero from "./components/Hero";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Header from "./components/Header"
+import './App.css';
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header>{/* Placeholder for Header component */}</header>
-      <Hero />
-      <footer>{/* Placeholder for Footer component */}</footer>
-    </div>
+      <Router>
+        <Switch>
+          <Route  path="/">
+            <Header />
+          </Route>
+        </Switch>
+        </Router>
+   </div>
   );
 }
-
 export default App;
+            
+
