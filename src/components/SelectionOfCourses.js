@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { courses } from "../listOfCourses";
 import CourseCard from "./CourseCard";
 
 const StyledWrapper = styled.div`
@@ -20,10 +21,12 @@ const StyledH1 = styled.h1`
 const pStyle = {
   "fontSize": "16px",
   "textAlign": "left",
+  "marginTop": "7px",
 };
 
 const StyledNav = styled.nav`
   width: 100%;
+  margin: 30px 0px;
   ul {
     display: flex;
     justify-content: space-between;
@@ -61,6 +64,7 @@ const CourseCards = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-top: 40px;
 `;
 
 const Selectionofcourses = () => {
@@ -73,7 +77,7 @@ const Selectionofcourses = () => {
       </p>
       <StyledNav>
         <ul>
-          <li class="active">Latest</li>
+          <li className="active">Latest</li>
           <li>Python</li>
           <li>Excel</li>
           <li>Web Development</li>
@@ -93,9 +97,14 @@ const Selectionofcourses = () => {
           friendly instruction for students of all levels.
         </p>
         <CourseCards>
-          <CourseCard courseName="Python" />
-          <CourseCard courseName="React" />
-          <CourseCard courseName="Angular" />
+          {courses.map((course) => {
+            return (
+              <CourseCard
+                key={`${course.name}:${course.title}`}
+                course={course}
+              />
+            );
+          })}
         </CourseCards>
       </StyledDiv>
     </StyledWrapper>

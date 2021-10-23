@@ -6,7 +6,6 @@ import Selectionofcourses from "./components/SelectionOfCourses";
 function App() {
   return (
     <div className="App">
-      <Selectionofcourses />
       <Router>
         <Switch>
           <Route path="/">
