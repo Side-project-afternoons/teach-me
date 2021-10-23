@@ -68,7 +68,7 @@
 }
 
 .nav-menu-cont {
-  margin-right: 4rem;
+  margin-right: 2rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -247,9 +247,6 @@
 
 
 @media only screen and (max-width: 1228px) {
-  .searchInputWrapper {
-    width: 20rem;
-  }
   .nav-cart {
     margin-left: 3rem;
   }
