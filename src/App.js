@@ -1,18 +1,16 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import "./App.css";
-import Selectionofcourses from "./components/SelectionOfCourses";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/">
-            <Header />
-          </Route>
+          <Route path="/"></Route>
         </Switch>
       </Router>
+      <Header />
     </div>
   );
 }
