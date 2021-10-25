@@ -1,4 +1,4 @@
-.flex-with-row {
+.flex-with-row-to-col {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -23,4 +23,21 @@
 	font-weight: 600;
 	font-style: normal;
 	text-decoration: none;
+}
+.w-80 {
+	width: 80%;
+}
+
+.m-auto {
+	margin: 0 auto;
+}
+.min-w-160 {
+	min-width: 161px;
+}
+
+/* 1140 */
+@media only screen and (max-width: 1140px) {
+	.flex-with-row-to-col {
+		flex-direction: column;
+	}
 }
