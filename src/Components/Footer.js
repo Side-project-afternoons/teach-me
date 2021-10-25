@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Grid } from "@mui/material";
+import { Grid, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import LanguageIcon from "@mui/icons-material/Language";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1302,
     position: "relative",
   },
-
   gridItem: {
     margin: "3em",
   },
@@ -40,6 +39,14 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "None",
     color: "white",
   },
+  button: {
+      ...theme.typography.buttons,
+      color: theme.palette.common.white,
+      borderColor: theme.palette.common.white,
+      borderRadius:"0px",
+      borderWidth: "2px",
+      fontWeight: 600
+  }
 }));
 
 export default function Footer() {
@@ -47,7 +54,7 @@ export default function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <Grid container justify="center" spacing={7}>
+      <Grid container justify="center" spacing={1}>
         <Grid item className={classes.gridItem}>
           <Grid container direction="column" spacing={2}>
             <Grid item className={classes.boldlink}>
@@ -102,15 +109,15 @@ export default function Footer() {
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
-      <Grid container justify="center" spacing={100}>
-        <Grid item className={classes.footerLogo}>
-          Teachme
+        <Grid item className={classes.gridItem}>
+            <Grid container direction="column" spacing={2}>
+                <Grid item>
+                    <Button variant="outlined" className={classes.button} startIcon={<LanguageIcon/>}>English</Button>
+                </Grid>
+            </Grid>
         </Grid>
-        <Grid item className={classes.footerCopyright}>
-          &copy;2021 Teachme, Inc.
-        </Grid>
       </Grid>
+  
     </footer>
   );
 }
