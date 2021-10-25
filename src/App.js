@@ -4,7 +4,7 @@ import BlueBanner from "./components/BlueBanner/BlueBanner";
 
 function App() {
 	return (
-		<div className='App'>
+		<div className="App">
 			<header>{/* Placeholder for Header component */}</header>
 			<Hero />
 			<BlueBanner />
