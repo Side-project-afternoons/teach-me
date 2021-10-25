@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Pacifico",
     fontSize: "1.7rem",
     color: "white",
-    textDecoration: "None",
     marginLeft: "1.6%",
   },
   footerCopyright: {
@@ -38,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
     textDecoration: "None",
     color: "white",
+    marginTop: "1em"
   },
   button: {
       ...theme.typography.buttons,
@@ -46,6 +46,10 @@ const useStyles = makeStyles((theme) => ({
       borderRadius:"0px",
       borderWidth: "2px",
       fontWeight: 600
+  },
+  somethingContainer: {
+      marginTop: "-1em",
+      paddingBottom: "1.5em"
   }
 }));
 
@@ -117,7 +121,14 @@ export default function Footer() {
             </Grid>
         </Grid>
       </Grid>
-  
+      <Grid container className={classes.somethingContainer} spacing={2}>
+          <Grid item className={classes.footerLogo}>
+              Teachme
+          </Grid>
+          <Grid item className={classes.footerCopyright}>
+              &copy; 2021 Teachme, Inc.
+          </Grid>
+      </Grid>
     </footer>
   );
 }
