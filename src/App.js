@@ -1,6 +1,6 @@
-import './App.css';
-import BlueBanner from './components/BlueBanner/BlueBanner';
-import Hero from './components/Hero';
+import "./App.css";
+import Hero from "./components/Hero";
+import BlueBanner from "./components/BlueBanner/BlueBanner";
 
 function App() {
 	return (
