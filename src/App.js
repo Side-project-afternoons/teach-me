@@ -1,5 +1,6 @@
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./components/Header";
 import "./App.css";
-import Hero from "./components/Hero";
 import BlueBanner from "./components/BlueBanner/BlueBanner";
 
 function App() {
@@ -12,5 +13,4 @@ function App() {
 		</div>
 	);
 }
-
 export default App;
