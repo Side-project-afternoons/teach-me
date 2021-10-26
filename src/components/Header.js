@@ -7,7 +7,7 @@ const Container = styled.div`
   flex-direction: row;
   text-align: center;
   height: 100vh;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 
 const Searchbar = styled.div`
@@ -15,17 +15,21 @@ const Searchbar = styled.div`
   text-align: center;
   overflow: hidden;
   height: 100vh;
-  padding-left: 10px;
-  margin-top: 33px;
+  margin-top: 10px;
   padding-left: 10px;
   height: 3.5vh;
   border: none;
 `;
 
 const Button = styled.button`
-  display: block;
+  width: ; 
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 5px;
+  text-align: center; 
   max-height: 10%;
-  margin-left: 10px;
+  margin-left: 5px;
+  border-radius: 15px;
 `;
 
 const Logo = styled.div`
@@ -39,6 +43,7 @@ const ContainerLeft = styled.div`
   text-align: center;
   height: 100vh;
   justify-content: space-around;
+ 
 `;
 
 const ContainerRight = styled.div`
@@ -49,7 +54,9 @@ const ContainerRight = styled.div`
   height: 100vh;
   margin-left: 10px;
   justify-content: space-around;
+  
 `;
+
 
 const Header = (props) => {
   return (
@@ -63,9 +70,9 @@ const Header = (props) => {
           <input type="search" placeholder="Search" results="0" />
         </Searchbar>
         <div>TeachMe Business</div>
-        <div>Solutions</div>
-        <div>OnDemand Courses</div>
-        <div>Resource Plans</div>
+        <div>Teach on TeachMe</div>
+        {/* <div>OnDemand Courses</div> */}
+        {/* <div>Resource Plans</div> */}
       </ContainerLeft>
 
       <ContainerRight>
