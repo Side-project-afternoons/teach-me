@@ -37,20 +37,22 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
     textDecoration: "None",
     color: "white",
-    marginTop: "1em"
+    marginTop: "1em",
+    marginLeft: "135em",
   },
   button: {
-      ...theme.typography.buttons,
-      color: theme.palette.common.white,
-      borderColor: theme.palette.common.white,
-      borderRadius:"0px",
-      borderWidth: "2px",
-      fontWeight: 600
+    ...theme.typography.buttons,
+    color: theme.palette.common.white,
+    borderColor: theme.palette.common.white,
+    borderRadius: "0px",
+    borderWidth: "2px",
+    fontWeight: 600,
+    marginLeft:"118em"
   },
   somethingContainer: {
-      marginTop: "-1em",
-      paddingBottom: "1.5em"
-  }
+    marginTop: "-1em",
+    paddingBottom: "1.5em",
+  },
 }));
 
 export default function Footer() {
