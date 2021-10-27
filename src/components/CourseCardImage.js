@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import pythonLogo from "../images/pythonLogo.svg";
 
 const Gradient = styled.div`
   aspect-ratio: 16/9;
@@ -8,6 +9,7 @@ const Gradient = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  position: relative;
 `;
 
 const FadedLogo = styled.div`
@@ -16,6 +18,8 @@ const FadedLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  opacity: 0.25;
 `;
 
 const WhiteBox = styled.div`
@@ -26,6 +30,7 @@ const WhiteBox = styled.div`
   width: 60px;
   height: 60px;
   border-radius: 8px;
+  z-index: 2;
 `;
 
 const Logo = styled.img`
@@ -42,11 +47,17 @@ const CourseCardImage = ({ courseImage }) => {
         background: `linear-gradient(${direction}, ${start}, ${stop})`,
       }}
     >
-      <FadedLogo>
-        <WhiteBox>
-          <Logo src={logo} />
-        </WhiteBox>
-      </FadedLogo>
+      <FadedLogo
+        style={{
+          background: `url("${logo}")`,
+          backgroundPosition: "center",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      <WhiteBox>
+        <Logo src={logo} />
+      </WhiteBox>
     </Gradient>
   );
 };
