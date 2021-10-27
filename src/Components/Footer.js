@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   gridItem: {
     marginTop:"0.5em",
     marginLeft: "10em",
-    marginRight:"3em",
+    marginRight:"1em",
     marginBottom: "3em"
   },
   boldlink: {
