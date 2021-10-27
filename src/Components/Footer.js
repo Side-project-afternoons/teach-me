@@ -9,9 +9,13 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     zIndex: 1302,
     position: "relative",
+    marginTop:"3.5em"
   },
   gridItem: {
-    margin: "3em",
+    marginTop:"3em",
+    marginLeft: "10em",
+    marginRight:"3em",
+    marginBottom: "3em"
   },
   boldlink: {
     color: "white",
@@ -30,14 +34,15 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Pacifico",
     fontSize: "2.6rem",
     color: "white",
-    
+    marginLeft: "3.5em",
   },
   footerCopyright: {
     fontFamily: "Manrope",
     fontSize: "1.5rem",
     textDecoration: "None",
     color: "white",
-   
+    marginTop: "1em",
+    marginLeft:"103em"
   },
   button: {
     ...theme.typography.buttons,
@@ -46,11 +51,12 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "0px",
     borderWidth: "2px",
     fontWeight: 600,
-    fontSize: "1.5em"
+    fontSize: "1.5em",
+    marginLeft:"55em"
   },
-  somethingContainer: {
-    marginTop: "-1em",
-    paddingBottom: "1.5em",
+  logoContainer: {
+    marginTop: "1em",
+    paddingBottom: "3em",
   },
 }));
 
@@ -59,7 +65,7 @@ export default function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <Grid container justify="center" spacing={2}>
+      <Grid container spacing={5}>
         <Grid item className={classes.gridItem}>
           <Grid container direction="column" spacing={2}>
             <Grid item className={classes.boldlink}>
@@ -122,7 +128,7 @@ export default function Footer() {
             </Grid>
         </Grid>
       </Grid>
-      <Grid container className={classes.somethingContainer} spacing={2}>
+      <Grid container className={classes.logoContainer}>
           <Grid item className={classes.footerLogo}>
               Teachme
           </Grid>
