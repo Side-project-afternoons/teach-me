@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import brandingImage from "../images/Branding.svg";
+import logo from "../images/logo.svg";
 
 const StyledHero = styled.div`
   background-color: #f5f5f5;
@@ -48,7 +48,7 @@ const Hero = () => {
         Hands-on courses help you learn without the hassle of setup
       </StyledP>
       <StyledButton>Explore Courses</StyledButton>
-      <StyledImg src={brandingImage} />
+      <StyledImg src={logo} />
     </StyledHero>
   );
 };
