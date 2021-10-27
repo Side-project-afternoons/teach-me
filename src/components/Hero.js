@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import brandingImage from "../images/Branding.svg";
+import brandingImage from "../images/branding.svg";
 
 const StyledHero = styled.div`
   background-color: #f5f5f5;
@@ -32,6 +32,7 @@ const StyledButton = styled.button`
   border-radius: 6px;
   width: 156px;
   height: 36px;
+  margin-top: 22px;
 `;
 
 const StyledImg = styled.img`
