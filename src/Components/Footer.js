@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop:"3.5em"
   },
   gridItem: {
-    marginTop:"1.5em",
+    marginTop:"0.5em",
     marginLeft: "10em",
     marginRight:"3em",
     marginBottom: "3em"
