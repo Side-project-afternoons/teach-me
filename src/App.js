@@ -1,25 +1,25 @@
 import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Navbar from "./components/Navbar/Navbar"
+import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero";
 import SelectionOfCourses from "./components/SelectionOfCourses";
 import "./App.css";
 import BlueBanner from "./components/BlueBanner/BlueBanner";
-
 
 function App() {
   return (
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Navbar /> {/* the other header is for the other two pages, waiting on merge */}
+          <Navbar />{" "}
+          {/* the other header is for the other two pages, waiting on merge */}
           <Hero />
-          <BlueBanner />
           <SelectionOfCourses />
+          {/* <BlueBanner /> <------ I'm pretty sure this component belongs on other pages not on the main page */}
         </Route>
 
         <Route exact path="/login">
-            <Navbar />
+          <Navbar />
         </Route>
 
         <Route exact path="/register">
@@ -33,7 +33,6 @@ function App() {
         <Route exact path="/teach">
           <Header />
         </Route>
-
       </Switch>
       <footer>{/* Placeholder for Footer component */}</footer>
     </div>
