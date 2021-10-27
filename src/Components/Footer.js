@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     borderWidth: "2px",
     fontWeight: 600,
     fontSize: "1.5em",
-    marginLeft:"55em"
+    marginLeft:"58em"
   },
   logoContainer: {
     marginTop: "1em",
