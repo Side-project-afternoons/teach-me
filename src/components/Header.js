@@ -1,95 +1,69 @@
-import React from "react";
-import styled from "styled-components";
+import '../components/Navbar/Navbar.css'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import teachme from '../images/teachme-logo.png'
 
-const Container = styled.nav`
-	overflow: hidden;
-	display: flex;
-	flex-direction: row;
-	text-align: center;
-	height: 100vh;
-	justify-content: space-between;
-`;
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import LanguageIcon from '@mui/icons-material/Language';
 
-const Searchbar = styled.div`
-	display: column-flex;
-	text-align: center;
-	overflow: hidden;
-	height: 100vh;
-	margin-top: 10px;
-	padding-left: 10px;
-	height: 3.5vh;
-	border: none;
-`;
-
-const Button = styled.button`
-	width: 10vh;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 5px;
-	text-align: center;
-	max-height: 10%;
-	margin-left: 5px;
-	border-radius: 15px;
-`;
-const Button1 = styled.button`
-	justify-content: space-between;
-`;
-
-const LinksSection = styled.div`
-	justify-content: center;
-	max-height: 50px;
-	margin: 0 auto;
-`;
-
-
-
-const ContainerLeft = styled.div`
-	overflow: hidden;
-	display: flex;
-	flex-direction: row;
-	text-align: center;
-	height: 100vh;
-	justify-content: space-around;
-`;
-
-const ContainerRight = styled.div`
-	overflow: hidden;
-	display: flex;
-	flex-direction: row;
-	text-align: center;
-	height: 100vh;
-	margin-left: 10px;
-	justify-content: space-around;
-`;
-
-const Header = (props) => {
+function Header() {
+	const [open, setOpen] = useState(false)
 	return (
-		<Container>
-			<ContainerLeft>
-				<div>
-					<h1 className="app-name">Teach Me</h1>
+		<div className="header">
+			<nav className="navbar">
+				<Link to="/"><img className="nav-logo" src={teachme} alt='teachme logo' /></Link>
+
+				<div className="container">
+					<div className="searchInputWrapper">
+						<input className="searchInput" type="text" placeholder='Search...'>
+						</input>
+					</div>
 				</div>
 
-				<Searchbar>
-					<input type="search" placeholder="Search" results="0" />
-				</Searchbar>
+				<div className="nav-menu-cont">
+					<ul className="nav-menu">
 
-				<LinksSection>
-					<Button1>TeachMe Business</Button1>
-					<Button1>Teach on TeachMe</Button1>
-					{/* <div>OnDemand Courses</div> */}
-					{/* <div>Resource Plans</div> */}
-				</LinksSection>
+						<li className="nav-item">
+							<Link to="/" className="nav-link">Why TeachMe Business?</Link>
+						</li>
 
 
-			</ContainerLeft>
+						<li className="nav-item">
+							<Link to="/" className="nav-link">Solutions</Link>
+						</li>
 
-			<ContainerRight>
-				<Button>Log In</Button>
-				<Button>Sign Up</Button>
-			</ContainerRight>
-		</Container>
-	);
-};
+						<li className="nav-item">
+							<Link to="/" className="nav-link">On Demand Courses</Link>
+						</li>
 
-export default Header;
+						<li className="nav-item">
+							<Link to="/teach" className="nav-link">Resource Plans</Link>
+						</li>
+
+						<ShoppingCartOutlinedIcon className="nav-cart" />
+
+						<li className="nav-item">
+							<Link to="/login" className="nav-link-login">Login</Link>
+						</li>
+
+						<li className="nav-item">
+							<Link to="/register" className="nav-link-register">Sign up</Link>
+						</li>
+
+						<div className="nav-language-cont">
+							<LanguageIcon className="nav-language" />
+						</div>
+
+					</ul>
+				</div>
+
+				<button onClick={() => setOpen(!open)} className={`${open ? 'hamburger2' : 'hamburger'}`}>
+					<span className="bar"></span>
+					<span className="bar"></span>
+					<span className="bar"></span>
+				</button>
+			</nav>
+		</div>
+	)
+}
+export default Header

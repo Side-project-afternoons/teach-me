@@ -1,5 +1,6 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Navbar from "./components/Navbar/Navbar"
 import Hero from "./components/Hero";
 import SelectionOfCourses from "./components/SelectionOfCourses";
 import "./App.css";
@@ -9,10 +10,31 @@ import BlueBanner from "./components/BlueBanner/BlueBanner";
 function App() {
   return (
     <div className="App">
-      <Header>{/* Placeholder for Header component */}</Header>
-      <Hero />
-      <BlueBanner />
-      <SelectionOfCourses />
+      <Switch>
+        <Route exact path="/">
+          <Navbar /> {/* the other header is for the other two pages, waiting on merge */}
+          <Hero />
+          <BlueBanner />
+          <SelectionOfCourses />
+        </Route>
+
+        <Route exact path="/login">
+            <Navbar />
+        </Route>
+
+        <Route exact path="/register">
+          <Navbar />
+        </Route>
+
+        <Route exact path="/business">
+          <Header />
+        </Route>
+
+        <Route exact path="/teach">
+          <Header />
+        </Route>
+
+      </Switch>
       <footer>{/* Placeholder for Footer component */}</footer>
     </div>
   );

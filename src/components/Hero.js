@@ -11,6 +11,7 @@ const StyledHero = styled.div`
   align-items: center;
   justify-content: center;
   padding: 30px 0px;
+  margin-top: 13rem;
 `;
 
 const StyledH1 = styled.h1`
