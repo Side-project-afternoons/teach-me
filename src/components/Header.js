@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.nav`
 	overflow: hidden;
 	display: flex;
 	flex-direction: row;
 	text-align: center;
 	height: 100vh;
-	align-content: space-between;
+	justify-content: space-between;
 `;
 
 const Searchbar = styled.div`
@@ -22,7 +22,7 @@ const Searchbar = styled.div`
 `;
 
 const Button = styled.button`
-	width: ;
+	width: 10vh;
 	margin-top: 0;
 	margin-bottom: 0;
 	padding: 5px;
@@ -36,7 +36,9 @@ const Button1 = styled.button`
 `;
 
 const LinksSection = styled.div`
-	justify-content: space-between;
+	justify-content: center;
+	max-height: 50px;
+	margin: 0 auto;
 `;
 
 
@@ -61,33 +63,33 @@ const ContainerRight = styled.div`
 `;
 
 const Header = (props) => {
-  return (
-    <Container>
-      <ContainerLeft>
-        <div>
-          <h1 className="app-name">Teach Me</h1>
-        </div>
+	return (
+		<Container>
+			<ContainerLeft>
+				<div>
+					<h1 className="app-name">Teach Me</h1>
+				</div>
 
-        <Searchbar>
-          <input type="search" placeholder="Search" results="0" />
-        </Searchbar>
+				<Searchbar>
+					<input type="search" placeholder="Search" results="0" />
+				</Searchbar>
 
-        <LinksSection>
-          <Button1>TeachMe Business</Button1>
-          <Button1>Teach on TeachMe</Button1>
-          {/* <div>OnDemand Courses</div> */}
-          {/* <div>Resource Plans</div> */}
-        </LinksSection>
+				<LinksSection>
+					<Button1>TeachMe Business</Button1>
+					<Button1>Teach on TeachMe</Button1>
+					{/* <div>OnDemand Courses</div> */}
+					{/* <div>Resource Plans</div> */}
+				</LinksSection>
 
 
-      </ContainerLeft>
+			</ContainerLeft>
 
-      <ContainerRight>
-        <Button>Log In</Button>
-        <Button>Sign Up</Button>
-      </ContainerRight>
-    </Container>
-  );
+			<ContainerRight>
+				<Button>Log In</Button>
+				<Button>Sign Up</Button>
+			</ContainerRight>
+		</Container>
+	);
 };
 
 export default Header;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../images/logo.svg";
+import brandingImage from "../images/branding.svg";
 
 const StyledHero = styled.div`
   background-color: #f5f5f5;
@@ -32,6 +32,7 @@ const StyledButton = styled.button`
   border-radius: 6px;
   width: 156px;
   height: 36px;
+  margin-top: 22px;
 `;
 
 const StyledImg = styled.img`
@@ -48,7 +49,7 @@ const Hero = () => {
         Hands-on courses help you learn without the hassle of setup
       </StyledP>
       <StyledButton>Explore Courses</StyledButton>
-      <StyledImg src={logo} />
+      <StyledImg src={brandingImage} />
     </StyledHero>
   );
 };
