@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop:"3.5em"
   },
   gridItem: {
-    marginTop:"3em",
+    marginTop:"1.5em",
     marginLeft: "10em",
     marginRight:"3em",
     marginBottom: "3em"
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logoContainer: {
     marginTop: "1em",
-    paddingBottom: "3em",
+    paddingBottom: "2em",
   },
 }));
 
