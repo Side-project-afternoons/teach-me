@@ -6,6 +6,7 @@ import SelectionOfCourses from "./components/SelectionOfCourses";
 import "./App.css";
 import BlueBanner from "./components/BlueBanner/BlueBanner";
 
+
 function App() {
   return (
     <div className="App">
