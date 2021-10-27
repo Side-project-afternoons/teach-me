@@ -1,79 +1,69 @@
-import React from "react";
-import styled from "styled-components";
+import './Navbar/Navbar.css'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import teachme from '../images/teachme-logo.png'
 
-const Container = styled.div`
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  height: 100vh;
-  justify-content: space-evenly;
-`;
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import LanguageIcon from '@mui/icons-material/Language';
 
-const Searchbar = styled.div`
-  display: column-flex;
-  text-align: center;
-  overflow: hidden;
-  height: 100vh;
-  padding-left: 10px;
-  margin-top: 33px;
-  padding-left: 10px;
-  height: 3.5vh;
-  border: none;
-`;
+function Header() {
+	const [open, setOpen] = useState(false)
+	return (
+		<div className="header">
+			<nav className="navbar">
+				<Link to="/"><img className="nav-logo" src={teachme} alt='teachme logo' /></Link>
 
-const Button = styled.button`
-  display: block;
-  max-height: 10%;
-  margin-left: 10px;
-`;
+				<div className="container">
+					<div className="searchInputWrapper">
+						<input className="searchInput" type="text" placeholder='Search...'>
+						</input>
+					</div>
+				</div>
 
-const Logo = styled.div`
-  display: flex;
-`;
+				<div className="nav-menu-cont">
+					<ul className="nav-menu">
 
-const ContainerLeft = styled.div`
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  height: 100vh;
-  justify-content: space-around;
-`;
+						<li className="nav-item">
+							<Link to="/" className="nav-link">Why TeachMe Business?</Link>
+						</li>
 
-const ContainerRight = styled.div`
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  height: 100vh;
-  margin-left: 10px;
-  justify-content: space-around;
-`;
 
-const Header = (props) => {
-  return (
-    <Container>
-      <ContainerLeft>
-        <Logo>
-          <h1 className="app-name">Teach Me</h1>
-        </Logo>
+						<li className="nav-item">
+							<Link to="/" className="nav-link">Solutions</Link>
+						</li>
 
-        <Searchbar>
-          <input type="search" placeholder="Search" results="0" />
-        </Searchbar>
-        <div>TeachMe Business</div>
-        <div>Solutions</div>
-        <div>OnDemand Courses</div>
-        <div>Resource Plans</div>
-      </ContainerLeft>
+						<li className="nav-item">
+							<Link to="/" className="nav-link">On Demand Courses</Link>
+						</li>
 
-      <ContainerRight>
-        <Button className="Log In">Log In</Button>
-        <Button className="Sign-up">Sign Up</Button>
-      </ContainerRight>
-    </Container>
-  );
-};
+						<li className="nav-item">
+							<Link to="/teach" className="nav-link">Resource Plans</Link>
+						</li>
 
-export default Header;
+						<ShoppingCartOutlinedIcon className="nav-cart" />
+
+						<li className="nav-item">
+							<Link to="/login" className="nav-link-login">Login</Link>
+						</li>
+
+						<li className="nav-item">
+							<Link to="/register" className="nav-link-register">Sign up</Link>
+						</li>
+
+						<div className="nav-language-cont">
+							<LanguageIcon className="nav-language" />
+						</div>
+
+					</ul>
+				</div>
+
+				<button onClick={() => setOpen(!open)} className={`${open ? 'hamburger2' : 'hamburger'}`}>
+					<span className="bar"></span>
+					<span className="bar"></span>
+					<span className="bar"></span>
+				</button>
+			</nav>
+		</div>
+	)
+}
+export default Header

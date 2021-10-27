@@ -16,29 +16,28 @@ const useStyles = makeStyles((theme) => ({
   boldlink: {
     color: "white",
     fontFamily: "Manrope",
-    fontSize: "1.3rem",
+    fontSize: "1.8rem",
     textDecoration: "None",
     fontWeight: "Bold",
   },
   link: {
     color: "white",
     fontFamily: "Manrope",
-    fontSize: "0.95rem",
+    fontSize: "1.4rem",
     textDecoration: "None",
   },
   footerLogo: {
     fontFamily: "Pacifico",
-    fontSize: "1.7rem",
+    fontSize: "2.6rem",
     color: "white",
-    marginLeft: "1.6%",
+    
   },
   footerCopyright: {
     fontFamily: "Manrope",
-    fontSize: "1rem",
+    fontSize: "1.5rem",
     textDecoration: "None",
     color: "white",
-    marginTop: "1em",
-    marginLeft: "135em",
+   
   },
   button: {
     ...theme.typography.buttons,
@@ -47,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "0px",
     borderWidth: "2px",
     fontWeight: 600,
-    marginLeft:"118em"
+    fontSize: "1.5em"
   },
   somethingContainer: {
     marginTop: "-1em",
@@ -60,7 +59,7 @@ export default function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <Grid container justify="center" spacing={1}>
+      <Grid container justify="center" spacing={2}>
         <Grid item className={classes.gridItem}>
           <Grid container direction="column" spacing={2}>
             <Grid item className={classes.boldlink}>
@@ -118,7 +117,7 @@ export default function Footer() {
         <Grid item className={classes.gridItem}>
             <Grid container direction="column" spacing={2}>
                 <Grid item>
-                    <Button variant="outlined" className={classes.button} startIcon={<LanguageIcon/>}>English</Button>
+                    <Button variant="outlined" className={classes.button} startIcon={<LanguageIcon style={{fontSize:"1.5em"}}/>}>English</Button>
                 </Grid>
             </Grid>
         </Grid>

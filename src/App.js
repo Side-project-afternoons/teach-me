@@ -2,26 +2,50 @@ import React from "react";
 import "./App.css";
 import { StyledEngineProvider } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "../src/Components/ui/Theme";
-import Footer from "../src/Components/Footer";
+import theme from "./components/ui/Theme";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./Components/Header";
+import Header from "./components/Header";
+
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero";
+import SelectionOfCourses from "./components/SelectionOfCourses";
 import "./App.css";
+import BlueBanner from "./components/BlueBanner/BlueBanner";
 
     
 function App() {
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <div className="App">
-          <Router>
-            <Switch>
-              <Route path="/"></Route>
-            </Switch>
-          </Router>
-          <Header />
-          <Footer />
-        </div>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Navbar />{" "}
+            {/* the other header is for the other two pages, waiting on merge */}
+            <Hero />
+            <SelectionOfCourses />
+            {/* <BlueBanner /> <------ I'm pretty sure this component belongs on other pages not on the main page */}
+          </Route>
+
+          <Route exact path="/login">
+            <Navbar />
+          </Route>
+
+          <Route exact path="/register">
+            <Navbar />
+          </Route>
+
+          <Route exact path="/business">
+            <Header />
+          </Route>
+
+          <Route exact path="/teach">
+            <Header />
+          </Route>
+        </Switch>
+        <Footer/>
+      </div>
       </ThemeProvider>
     </StyledEngineProvider>
   );
