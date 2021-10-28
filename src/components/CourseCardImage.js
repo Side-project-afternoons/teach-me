@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import pythonLogo from "../images/pythonLogo.svg";
+// import pythonLogo from "../images/pythonLogo.svg";
 
 const Gradient = styled.div`
   aspect-ratio: 16/9;

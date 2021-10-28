@@ -1,0 +1,12 @@
+.nav-link-login {
+    display: flex;
+    justify-content: baseline;
+}
+.nav-link-register{
+    display:flex;
+    justify-content: baseline;
+}
+.nav-menu{
+    display: flex;
+    text-align:center;
+}
