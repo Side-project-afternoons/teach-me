@@ -6,16 +6,25 @@ import LanguageIcon from "@mui/icons-material/Language";
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.common.black,
-    width: "100%",
+    width: "100%", //1022px
     zIndex: 1302,
     position: "relative",
-    marginTop:"3.5em"
+    marginTop: "3.5em",
   },
   gridItem: {
-    marginTop:"0.5em",
+    marginTop: "0.5em",
     marginLeft: "10em",
-    marginRight:"1em",
-    marginBottom: "3em"
+    marginRight: "1em",
+    marginBottom: "3em",
+    [theme.breakpoints.down("md")]: {
+      display: "none"
+    }
+  },
+  gridItemButton: {
+    marginTop: "0.5em",
+    marginLeft: "10em",
+    marginRight: "1em",
+    marginBottom: "3em",
   },
   boldlink: {
     color: "white",
@@ -42,7 +51,21 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "None",
     color: "white",
     marginTop: "1em",
-    marginLeft:"103em"
+    marginLeft: "103em",
+    [theme.breakpoints.up("lg")]: {
+      marginLeft: "65em",
+    },
+    [theme.breakpoints.up("macbookPro")]: {
+      marginTop: "-2em",
+      marginLeft: "105em",
+    },
+    [theme.breakpoints.up("fhd")]: {
+      marginLeft: "103em",
+    },
+    [theme.breakpoints.up("qhd")]: {
+      marginLeft: "144em",
+      marginTop: "1em",
+    },
   },
   button: {
     ...theme.typography.buttons,
@@ -52,7 +75,19 @@ const useStyles = makeStyles((theme) => ({
     borderWidth: "2px",
     fontWeight: 600,
     fontSize: "1.5em",
-    marginLeft:"58em"
+    marginLeft: "59em",
+    [theme.breakpoints.up("lg")]: {
+      marginLeft: "20em",
+    },
+    [theme.breakpoints.up("macbookPro")]: {
+      marginLeft: "48em",
+    },
+    [theme.breakpoints.up("fhd")]: {
+      marginLeft: "59em",
+    },
+    [theme.breakpoints.up("qhd")]: {
+      marginLeft: "100em",
+    },
   },
   logoContainer: {
     marginTop: "1em",
@@ -120,7 +155,7 @@ export default function Footer() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item className={classes.gridItem}>
+        <Grid item className={classes.gridItemButton}>
             <Grid container direction="column" spacing={2}>
                 <Grid item>
                     <Button variant="outlined" className={classes.button} startIcon={<LanguageIcon style={{fontSize:"1.5em"}}/>}>English</Button>
