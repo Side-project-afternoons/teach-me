@@ -1,190 +1,35 @@
-.header{
-    border-bottom: 1px solid #E2E8F0;
-    position: relative;
-    display: flex;
-  }
-  
-.navbar {
-display: flex;
-position: fixed;
-background-color: white;
-width: 100%;
-justify-content: space-between;
-align-items: center;
-padding: 1.3rem 0rem;
-box-shadow: 0 6px 7px -1.9px rgba(182, 178, 178, 0.897);
-}
-
-.nav-logo {
-object-fit: contain;
-width: 12.5rem;
-margin-left: 1rem;
-}
-
-.container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-
-.searchInputWrapper {
-position: relative;
-border: 1px solid black;
-border-radius: 15rem;
-flex-grow: 1;
-min-width: 20rem;
-width: 23rem;
-margin-left: 2.4rem;
-}
-
-.searchInput {
-width: 100%;
-flex-grow: 1;
-height: 3.5rem;
-padding: 0 1rem; 
-border-radius: 2rem;
-border: none;
-transition: transform 0.1s ease-in-out;
-}
-
-::placeholder {
-color: #a1a1a1;
-}
-
-/* hide the placeholder text on focus */
-:focus::placeholder {
-text-indent: -999px
-}
-
-.searchInput:focus {
-color: black;
-transform: scale(1.1);
-transition: all 0.1s ease-in-out;
-}
-
-.container:focus-within > 
-.searchInputWrapper > .searchInputIcon {
-right: 0.2rem;
-}
-
-.nav-menu-cont {
-margin-right: 4rem;
-padding-top: 3rem;
-padding-bottom: 3rem;
-}
-
-.nav-menu {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-.nav-item {
-margin-left: 7rem;
-}
-
-.nav-link {
-font-size: 1.6rem;
-font-weight: 400;
-color: #475569;
-}
-
-.nav-link:hover {
-color: rgb(0, 0, 0);
-}
-
-.nav-cart {
-transform: scale(2.2);
-position: relative;
-left: 3.5rem;
-cursor: pointer;
-margin-left: 9rem;
-}
-
-.nav-link-login{
-border: 2px solid black;
-background-color: white;
-color: black;
-padding: 1rem 1.7rem;
-font-size: 16px;
-cursor: pointer;
-margin-right: -6rem;
-}
-
-.nav-link-login:hover{
-background-color: black;
-color: white;
-}
-
-.nav-link-register{
-border: 2px solid black;
-background-color: black;
-color: white;
-padding: 0.98rem 1rem;
-font-size: 16px;
-cursor: pointer;
-}
-
-.nav-link-register:hover{
-background-color: white;
-color: black;
-}
-
-.nav-language-cont {
-border: 2px solid black;
-background-color: white;
-color: black;
-padding: 0.7rem 1.8rem;
-cursor: pointer;
-margin-left: 1rem;
-width: 2rem;
-display: flex;
-justify-content: center;
-height: 4.2rem;
-}
-
-.nav-language {
-font-size: 2.3rem !important;
-justify-content: center;
-position: relative;
-top: 0.1rem;
-}
-
 .hamburger {
-display: none;  
+  display: none;
 }
 
 .hamburger2 {
-display: none;  
+  display: none;
 }
 
 .bar {
-display: block;
-width: 30px;
-height: 4.2px;
-margin: 5px auto;
--webkit-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
-background-color: #101010;
-border-radius: 10rem;
+  display: block;
+  width: 30px;
+  height: 4.2px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+  border-radius: 10rem;
 }
-
 
 /* MQ */
 
-
 @media only screen and (max-width: 1170px) {
-.nav-menu {
+  .nav-menu {
     display: none;
-}
+  }
 
-.searchInputWrapper {
+  .searchInputWrapper {
     width: 50rem;
     margin-left: 4rem;
-}
+  }
 
-.hamburger {
+  .hamburger {
     display: block;
     cursor: pointer;
     background: none;
@@ -192,102 +37,100 @@ border-radius: 10rem;
     padding-right: 2rem;
     transition: all 0.5s ease-in;
     transition: all 0.5s ease-out;
-}
-    
-.hamburger2 {
+  }
+
+  .hamburger2 {
     background: none;
     border: none;
     display: block;
     transition: all 0.5s ease-out;
     padding-right: 2rem;
     cursor: pointer;
-}
-    
-.hamburger2 .bar:nth-child(1) {
+  }
+
+  .hamburger2 .bar:nth-child(1) {
     transform: rotate(45deg) translate(4.5px, 6px);
     transition: all 0.5s ease-out;
-}
+  }
 
-.hamburger2 .bar:nth-child(3) {
+  .hamburger2 .bar:nth-child(3) {
     transform: rotate(-45deg) translate(1.5px, -2.9px);
     transition: all 0.5s ease-out;
-}
+  }
 
-.hamburger2 .bar:nth-child(2) {
+  .hamburger2 .bar:nth-child(2) {
     display: none;
     transition: all 0.5s ease-out;
-}
+  }
 }
 
 @media only screen and (max-width: 763px) {
-.searchInputWrapper {
+  .searchInputWrapper {
     display: none;
+  }
 }
-}
-
 
 @media only screen and (max-width: 280px) {
-.searchInputWrapper {
+  .searchInputWrapper {
     display: none;
-}
-.nav-language-cont {
+  }
+  .nav-language-cont {
     display: none;
-}
-.nav-link-login {
+  }
+  .nav-link-login {
     display: none;
-}
+  }
 }
 
-/* The MQ's below got a little messy, If you know how to make that search bar more responsive than this and less janky, please reach out! for now this is so we have a navbar at least*/ 
+/* The MQ's below got a little messy, If you know how to make that search bar more responsive than this and less janky, please reach out! for now this is so we have a navbar at least*/
 
 @media only screen and (max-width: 880px) {
-.searchInputWrapper {
+  .searchInputWrapper {
     display: none;
-}
+  }
 }
 
 @media only screen and (max-width: 1920px) {
-.searchInputWrapper {
+  .searchInputWrapper {
     width: 20rem;
-}
+  }
 }
 
 @media only screen and (max-width: 1200px) {
-.searchInputWrapper {
+  .searchInputWrapper {
     width: 20rem;
-}
-.nav-cart {
+  }
+  .nav-cart {
     margin-left: 3rem;
-}
+  }
 }
 
 @media only screen and (max-width: 1169px) {
-.searchInputWrapper {
+  .searchInputWrapper {
     width: 60rem;
-}
+  }
 }
 
 @media only screen and (min-width: 1391px) {
-.searchInputWrapper {
+  .searchInputWrapper {
     width: 30rem;
-}
+  }
 }
 
 @media only screen and (min-width: 1580px) {
-.searchInputWrapper {
+  .searchInputWrapper {
     width: 50rem;
-}
+  }
 }
 
 @media only screen and (min-width: 1720px) {
-.searchInputWrapper {
+  .searchInputWrapper {
     width: 70rem;
-}
+  }
 }
 
 @media only screen and (min-width: 2157px) {
-.searchInputWrapper {
+  .searchInputWrapper {
     width: 80rem;
+  }
 }
-}
-
