@@ -1,5 +1,12 @@
-import { Switch, Route } from "react-router-dom";
+import React from "react";
+import "./App.css";
+import { StyledEngineProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./components/ui/Theme";
+import Footer from "./components/Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
+
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
@@ -9,6 +16,7 @@ import SignupPage from "./pages/SignupPage";
 import BusinessPage from "./pages/BusinessPage";
 import TeachmePage from "./pages/TeachmePage";
 
+    
 function App() {
 	return (
 		<div className="App">

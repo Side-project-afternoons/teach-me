@@ -1,4 +1,4 @@
-import '../components/Navbar/Navbar.css'
+import './Navbar/Navbar.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import teachme from '../images/teachme-logo.png'
