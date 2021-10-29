@@ -2,8 +2,11 @@ import './Navbar/Navbar.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import teachme from '../images/teachme-logo.png'
+import './Header.css'
 
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+
+
+// import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LanguageIcon from '@mui/icons-material/Language';
 
 function Header() {
@@ -40,7 +43,7 @@ function Header() {
 							<Link to="/teach" className="nav-link">Resource Plans</Link>
 						</li>
 
-						<ShoppingCartOutlinedIcon className="nav-cart" />
+						{/* <ShoppingCartOutlinedIcon className="nav-cart" /> */}
 
 						<li className="nav-item">
 							<Link to="/login" className="nav-link-login">Login</Link>
