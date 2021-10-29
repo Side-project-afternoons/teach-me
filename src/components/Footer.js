@@ -6,7 +6,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.common.black,
-    width: "100%", //1022px
+    width: "100%",
     zIndex: 1302,
     position: "relative",
     marginTop: "3.5em",
@@ -14,16 +14,13 @@ const useStyles = makeStyles((theme) => ({
   gridItem: {
     marginTop: "0.5em",
     marginLeft: "10em",
-    marginRight: "1em",
+    
     marginBottom: "3em",
-    [theme.breakpoints.down("md")]: {
-      display: "none"
-    }
   },
   gridItemButton: {
     marginTop: "0.5em",
     marginLeft: "10em",
-    marginRight: "1em",
+    marginRight: "10em",
     marginBottom: "3em",
   },
   boldlink: {
@@ -43,29 +40,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Pacifico",
     fontSize: "2.6rem",
     color: "white",
-    marginLeft: "3.5em",
   },
   footerCopyright: {
     fontFamily: "Manrope",
     fontSize: "1.5rem",
     textDecoration: "None",
     color: "white",
-    marginTop: "1em",
-    marginLeft: "103em",
-    [theme.breakpoints.up("lg")]: {
-      marginLeft: "65em",
-    },
-    [theme.breakpoints.up("macbookPro")]: {
-      marginTop: "-2em",
-      marginLeft: "105em",
-    },
-    [theme.breakpoints.up("fhd")]: {
-      marginLeft: "103em",
-    },
-    [theme.breakpoints.up("qhd")]: {
-      marginLeft: "144em",
-      marginTop: "1em",
-    },
+    marginTop:"1em"
   },
   button: {
     ...theme.typography.buttons,
@@ -75,23 +56,9 @@ const useStyles = makeStyles((theme) => ({
     borderWidth: "2px",
     fontWeight: 600,
     fontSize: "1.5em",
-    marginLeft: "59em",
-    [theme.breakpoints.up("lg")]: {
-      marginLeft: "20em",
-    },
-    [theme.breakpoints.up("macbookPro")]: {
-      marginLeft: "48em",
-    },
-    [theme.breakpoints.up("fhd")]: {
-      marginLeft: "59em",
-    },
-    [theme.breakpoints.up("qhd")]: {
-      marginLeft: "100em",
-    },
   },
   logoContainer: {
-    marginTop: "1em",
-    paddingBottom: "2em",
+    paddingBottom:"2em",
   },
 }));
 
@@ -100,7 +67,7 @@ export default function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <Grid container spacing={5}>
+      <Grid container justifyContent="center" className={classes.mainContainer} spacing={5}>
         <Grid item className={classes.gridItem}>
           <Grid container direction="column" spacing={2}>
             <Grid item className={classes.boldlink}>
@@ -163,7 +130,7 @@ export default function Footer() {
             </Grid>
         </Grid>
       </Grid>
-      <Grid container className={classes.logoContainer}>
+      <Grid container justifyContent="center" className={classes.logoContainer} spacing={80}>
           <Grid item className={classes.footerLogo}>
               Teachme
           </Grid>
