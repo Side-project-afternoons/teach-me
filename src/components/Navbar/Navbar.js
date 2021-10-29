@@ -26,6 +26,7 @@ const Logo = styled.h3`
   font-family: "Pacifico", cursive;
   font-size: 25px;
   color: #424242;
+  font-weight: 300;
 `;
 
 const SearchBarWrapper = styled.div`
