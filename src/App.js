@@ -19,36 +19,40 @@ import TeachmePage from "./pages/TeachmePage";
     
 function App() {
 	return (
-		<div className="App">
-			<Switch>
-				<Route exact path="/">
-					<Navbar />{" "}
-					{/* the other header is for the other two pages, waiting on merge */}
-					<HomePage />
-				</Route>
+    <StyledEngineProvider injectFirst>
+		<ThemeProvider theme={theme}>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Navbar />{" "}
+            {/* the other header is for the other two pages, waiting on merge */}
+            <HomePage />
+          </Route>
 
-				<Route exact path="/login">
-					<Navbar />
-					<LoginPage />
-				</Route>
+          <Route exact path="/login">
+            <Navbar />
+            <LoginPage />
+          </Route>
 
-				<Route exact path="/register">
-					<Navbar />
-					<SignupPage />
-				</Route>
+          <Route exact path="/register">
+            <Navbar />
+            <SignupPage />
+          </Route>
 
-				<Route exact path="/business">
-					<Header />
-					<BusinessPage />
-				</Route>
+          <Route exact path="/business">
+            <Header />
+            <BusinessPage />
+          </Route>
 
-				<Route exact path="/teach">
-					<Header />
-					<TeachmePage />
-				</Route>
-			</Switch>
-			<footer>{/* Placeholder for Footer component */}</footer>
-		</div>
-	);
+          <Route exact path="/teach">
+            <Header />
+            <TeachmePage />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
+	  </ThemeProvider>
+    </StyledEngineProvider>
+  );
 }
 export default App;
