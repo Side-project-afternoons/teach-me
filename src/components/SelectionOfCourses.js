@@ -97,7 +97,7 @@ const Selectionofcourses = () => {
           friendly instruction for students of all levels.
         </p>
         <CourseCards>
-          {courses.map((course) => {
+          {courses.slice(0, 3).map((course) => {
             return (
               <CourseCard
                 key={`${course.name}:${course.title}`}
