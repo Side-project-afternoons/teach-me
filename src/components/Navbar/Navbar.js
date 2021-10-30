@@ -63,6 +63,10 @@ const NavLinks = styled.nav`
 
     li {
       font-size: 16px;
+
+      a:visited {
+        color: inherit;
+      }
     }
   }
 `;
