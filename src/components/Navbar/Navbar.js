@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import shoppingCart from "../../images/shoppingCart.svg";
 import globe from "../../images/globe.svg";
-import { flexbox } from "@mui/system";
 
 const NavBar = styled.header`
   width: 100%;
