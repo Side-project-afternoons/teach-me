@@ -19,7 +19,7 @@
 
 /* MQ */
 
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 980px) {
   .nav-menu {
     display: none;
   }
