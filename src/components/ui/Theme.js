@@ -21,6 +21,7 @@ const theme = createTheme({
       xs: 0,
       sm: 600,
       md: 900,
+      docSize: 1023,
       lg: 1200,
       xl: 1536,
       macbookPro: 1792,
