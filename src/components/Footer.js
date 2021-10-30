@@ -13,15 +13,26 @@ const useStyles = makeStyles((theme) => ({
   },
   gridItem: {
     marginTop: "0.5em",
-    marginLeft: "10em",
-    
+    marginLeft: "8em",
     marginBottom: "3em",
+    [theme.breakpoints.up("docSize")]: {
+      marginRight: "2em",
+    },
+    [theme.breakpoints.up("lg")]: {
+      marginRight: "0em",
+    },
   },
   gridItemButton: {
     marginTop: "0.5em",
-    marginLeft: "10em",
-    marginRight: "10em",
     marginBottom: "3em",
+    [theme.breakpoints.up("docSize")]: {
+      marginRight: "6em",
+      marginLeft: "6em",
+    },
+    [theme.breakpoints.up("lg")]: {
+      marginRight: "8em",
+      marginLeft: "15em",
+    },
   },
   boldlink: {
     color: "white",
@@ -40,13 +51,25 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Pacifico",
     fontSize: "2.6rem",
     color: "white",
+    [theme.breakpoints.up("docSize")]: {
+      marginRight: "0.5em",
+    },
+    [theme.breakpoints.up("lg")]: {
+      marginLeft: "0.5em",
+    },
   },
   footerCopyright: {
     fontFamily: "Manrope",
     fontSize: "1.5rem",
     textDecoration: "None",
     color: "white",
-    marginTop:"1em"
+    [theme.breakpoints.up("docSize")]: {
+      marginTop: "1em",
+      marginLeft: "38em",
+    },
+    [theme.breakpoints.up("lg")]: {
+      marginLeft: "41em",
+    },
   },
   button: {
     ...theme.typography.buttons,
@@ -55,10 +78,10 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "0px",
     borderWidth: "2px",
     fontWeight: 600,
-    fontSize: "1.5em",
+    fontSize: "1.4em",
   },
   logoContainer: {
-    paddingBottom:"2em",
+    paddingBottom: "2em",
   },
 }));
 
@@ -130,7 +153,7 @@ export default function Footer() {
             </Grid>
         </Grid>
       </Grid>
-      <Grid container justifyContent="center" className={classes.logoContainer} spacing={80}>
+      <Grid container justifyContent="center" className={classes.logoContainer} spacing={2}>
           <Grid item className={classes.footerLogo}>
               Teachme
           </Grid>
